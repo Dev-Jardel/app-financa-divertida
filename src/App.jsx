@@ -7,14 +7,14 @@ import { DollarSign, CreditCard, ArrowDownCircle, ArrowUpCircle, Wallet, Trophy,
 // --- VERSÃO DO APP ---
 const APP_VERSION = '2.4.1'; 
 
-// --- CONFIGURAÇÃO FIREBASE ---
+// --- CONFIGURAÇÃO FIREBASE (PROTEGIDA) ---
 const userManualConfig = {
-    apiKey: "AIzaSyBIDk-9N7ds2po39UdhJF_dOcsS4EVWX7g",
-    authDomain: "app-financa-divertida.firebaseapp.com",
-    projectId: "app-financa-divertida",
-    storageBucket: "app-financa-divertida.firebasestorage.app",
-    messagingSenderId: "371447740543",
-    appId: "1:371447740543:web:9050ac139aa7b3777eba74a"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const envConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
